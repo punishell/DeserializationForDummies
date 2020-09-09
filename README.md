@@ -66,10 +66,14 @@ Contents
 In this example the stream contains a TC_BLOCKDATA followed by a TC_STRING which can be replaced with a payload.
 ### Now What?
 ![ricky](https://raw.githubusercontent.com/punishell/DezerializationForDummies/master/ricky.png)
+
 Having identified an entry point, the next thing we need are POP gadgets.
 In order to execute some commmand we need POP Gadget chain but dont worry here is another great [the tool](https://github.com/frohoff/ysoserial/).
+
 ![cyrus](https://raw.githubusercontent.com/punishell/DezerializationForDummies/master/cyrus.png)
+
 So whats now? Go and test new knowledge here:
+
 [the lab](https://github.com/NickstaDB/DeserLab).
 
 
