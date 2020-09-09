@@ -72,9 +72,40 @@ In order to execute some commmand we need POP Gadget chain but dont worry here i
 
 ![cyrus](https://raw.githubusercontent.com/punishell/DezerializationForDummies/master/cyrus.png)
 
-So whats now? Go and test new knowledge here:
+So whats now? Go and test new knowledge in [the lab](https://github.com/NickstaDB/DeserLab).
 
-[the lab](https://github.com/NickstaDB/DeserLab).
+
+To run the server and client, you can use the following commands:
+```
+java -jar DeserLab.jar -server 127.0.0.1 6666
+ [+] DeserServer started, listening on 127.0.0.1:6666
+ [+] Connection accepted from 127.0.0.1:50410
+ [+] Sending hello...
+ [+] Hello sent, waiting for hello from client...
+ [+] Hello received from client...
+ [+] Sending protocol version...
+ [+] Version sent, waiting for version from client...
+ [+] Client version is compatible, reading client name...
+ [+] Client name received: testing
+ [+] Hash request received, hashing: test
+ [+] Hash generated: 098f6bcd4621d373cade4e832627b4f6
+ [+] Done, terminating connection.
+ 
+java -jar DeserLab.jar -client 127.0.0.1 6666
+ [+] DeserClient started, connecting to 127.0.0.1:6666
+ [+] Connected, reading server hello packet...
+ [+] Hello received, sending hello to server...
+ [+] Hello sent, reading server protocol version...
+ [+] Sending supported protocol version to the server...
+ [+] Enter a client name to send to the server:
+ testing
+ [+] Enter a string to hash:
+ test
+ [+] Generating hash of "test"...
+ [+] Hash generated: 098f6bcd4621d373cade4e832627b4f6
+
+```
+
 
 
 
