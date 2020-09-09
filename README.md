@@ -106,15 +106,43 @@ java -jar DeserLab.jar -client 127.0.0.1 6666
  [+] Hash generated: 098f6bcd4621d373cade4e832627b4f6
 
 ```
+Ok so lets capture the trafic and run above client again after:
 
+```
+kali@kali:#  tcpdump -i lo -n -w deserlab.pcap 'port 6666'
+```
+Now lets check  our serialized data:
+```
+kali@kali:# tshark -r deserlab.pcap -T fields -e tcp.srcport -e data -e tcp.dstport -E separator=, | grep -v ',,' | grep '^6666,' | cut -d "," -f2 |tr "n" ":" | sed s/://g | tr -d '\n' 
+                                                                                                                                                                         
+aced00057704f000baaa77020101737200146e622e64657365722e4861736852657175657374e52ce9a92ac1f9910200024c000a64617461546f486173687400124c6a6176612f6c616e672f537472696e673b4c00077468654861736871007e00017870740004746573747400203039386636626364343632316433373363616465346538333236323762346636root@kali
+```
 
+The above command only selects the server response, if you want to get the client data, you need to change the port number. The final result is as follows:
 
+```
+aced00057704f000baaa77020101737200146e622e64657365722e486 [...]
+```
+Now we can run analyse tool:
+```
+java -jar SerializationDumper-v1.0.jar aced00057704f000baaa77020101
+After execution, it should output something similar to the following:
 
-
-
-
-
-
+STREAM_MAGIC-0xac ed
+STREAM_VERSION-0x00 05
+Contents
+ TC_BLOCKDATA-0x77
+ Length-4-0x04
+ Contents-0xf000baaa
+ TC_BLOCKDATA-0x77
+ Length-2-0x02
+ Contents-0x0101
+ TC_OBJECT-0x73
+ TC_CLASSDESC-0x72
+ className
+ Length-20-0x00 14
+ Value-nb.deser.HashRequest-0x6e622e64657365722e4861736852657175657374
+```
 
 
 
