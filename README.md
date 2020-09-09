@@ -28,6 +28,8 @@ The most obvious indicator of Java serialization data is the presence of Java cl
 
 ### Something Fu*ky
 ![sth_fucky](https://raw.githubusercontent.com/punishell/DezerializationForDummies/master/sth_fucky.jpg)
+
+
 Identified the use of serialized data, we need to identify the offset into that data where we can actually inject a payload. The target needs to call ‘ObjectInputStream.readObject’ in order to deserialize and instantiate an object (payload) and support property-oriented programming, however it could call other ObjectInputStream methods first, such as ‘readInt’ which will simply read a 4-byte
 
 The readObject method will read the following content types from a serialization stream:
