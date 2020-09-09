@@ -61,3 +61,40 @@ Contents
     Length - 4 - 0x00 04
     Value - ABCD - 0x41424344
 ```
+In this example the stream contains a TC_BLOCKDATA followed by a TC_STRING which can be replaced with a payload.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Links
+https://nickbloor.co.uk/2017/08/13/attacking-java-deserialization/
+https://github.com/NickstaDB/SerializationDumper
+https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html
+https://juejin.im/entry/6844903501353451534
+http://randomlinuxtech.blogspot.com/2017/08/java-deserialization-howto.html
+https://blog.csdn.net/qsort_/article/details/104874111
+https://blog.csdn.net/qsort_/article/details/104969138
+https://meteatamel.wordpress.com/2012/02/13/jmx-rmi-vs-jmxmp/
