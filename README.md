@@ -70,6 +70,7 @@ In this example the stream contains a TC_BLOCKDATA followed by a TC_STRING which
 Having identified an entry point, the next thing we need are POP gadgets.
 In order to execute some commmand we need POP Gadget chain but dont worry here is another great [the tool](https://github.com/frohoff/ysoserial/).
 
+### Fu*k off i got work to do
 ![cyrus](https://raw.githubusercontent.com/punishell/DezerializationForDummies/master/cyrus.png)
 
 So whats now? Go and test new knowledge in [the lab](https://github.com/NickstaDB/DeserLab).
