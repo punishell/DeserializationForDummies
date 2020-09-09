@@ -143,8 +143,26 @@ Contents
  Length-20-0x00 14
  Value-nb.deser.HashRequest-0x6e622e64657365722e4861736852657175657374
 ```
+if you have problem running it from command line try:
+```
+java -jar SerializationDumper.jar -f hex.txt 
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
 
+STREAM_MAGIC - 0xac ed
+STREAM_VERSION - 0x00 05
+Contents
+  TC_BLOCKDATA - 0x77
+    Length - 4 - 0x04
+    Contents - 0xf000baaa
+  TC_BLOCKDATA - 0x77
+    Length - 2 - 0x02
+    Contents - 0x0101
+  TC_OBJECT - 0x73
+    TC_CLASSDESC - 0x72
+      className
+        Length - 20 - 0x00 14
 
+```
 
 
 
