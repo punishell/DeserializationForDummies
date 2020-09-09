@@ -131,8 +131,8 @@ java -jar DeserLab.jar -client 127.0.0.1 6666
 
 
 
-
-### Links
+ps. almose everything here is ctrl+c strl+v but i did enjoy adding some TPB pictures and learn something :)
+### Reference
 https://nickbloor.co.uk/2017/08/13/attacking-java-deserialization/
 
 https://github.com/NickstaDB/SerializationDumper
