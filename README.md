@@ -1,4 +1,4 @@
-# DezerializationForDummies
+# DeserializationForDummies
 ![tpb](https://raw.githubusercontent.com/punishell/DezerializationForDummies/master/tpb.jpg)
 
 Some interesting qoutes and comments regarding to deserialization in JAVA.
