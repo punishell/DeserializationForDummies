@@ -48,7 +48,7 @@ The readObject method will read the following content types from a serialization
 0x7E – TC_ENU
 
 Here comes [the tool](https://github.com/NickstaDB/SerializationDumper)
-Which we can uhelp to identify entry points for deserialization.
+Which we can help to identify entry points for deserialization.
 Example:
 ```
 $ java -jar SerializationDumper-v1.0.jar ACED00057708af743f8c1d120cb974000441424344
