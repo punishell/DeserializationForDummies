@@ -216,7 +216,7 @@ So when we look at the process of information exchange, we will find that there 
 We can clearly see that the last part of the data flow is the "nb.deser.HashRequest" object. The place to read this object is also the last part of the exchange process, so it explains why we put a payload here. So now we know where to use the payload, so how do we choose, generate and send the payload?
 
 ```
-java -jar ysoserial.jar Groovy1 "touch pox.txt" > thepayload.bin
+java -jar ysoserial.jar Groovy1 "touch poc.txt" > thepayload.bin
 ```
 
 How it should look like:
